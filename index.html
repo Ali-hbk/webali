@@ -1,1 +1,278 @@
-pagina web de ali
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil profesional administrativo: organización, gestión y apoyo a equipos.">
+  <title>Perfil profesional | Administración</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d2b29;
+      --muted: #64736e;
+      --accent: #28665a;
+      --paper: #f5f7f3;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(100% - 40px, 1040px);
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+    }
+
+    .brand {
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    .availability {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .availability::before {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #64a887;
+      content: "";
+    }
+
+    main {
+      padding: 48px 0 72px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      align-items: center;
+      gap: 56px;
+      padding: 64px;
+      border: 1px solid #e6ebe4;
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: 0 18px 50px rgb(29 43 41 / 5%);
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 620px;
+      margin: 0;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: -0.06em;
+      line-height: 1.05;
+    }
+
+    .intro {
+      max-width: 560px;
+      margin: 22px 0 30px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #1f5147;
+    }
+
+    .monogram {
+      display: grid;
+      width: min(100%, 220px);
+      aspect-ratio: 1;
+      place-items: center;
+      justify-self: end;
+      border-radius: 50%;
+      background: #e8f0e9;
+      color: var(--accent);
+      font-size: 5rem;
+      font-weight: 700;
+      letter-spacing: -0.08em;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .card {
+      padding: 32px;
+      border: 1px solid #e6ebe4;
+      border-radius: 18px;
+      background: var(--white);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skills li {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #f0f4ef;
+      color: #35584e;
+      font-size: 0.88rem;
+    }
+
+    footer {
+      padding: 0 0 28px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 28px, 1040px);
+      }
+
+      header {
+        padding: 20px 0;
+      }
+
+      .availability {
+        font-size: 0.8rem;
+      }
+
+      main {
+        padding: 24px 0 44px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 34px 26px;
+      }
+
+      .monogram {
+        width: 112px;
+        justify-self: start;
+        font-size: 2.8rem;
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .card {
+        padding: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="#" aria-label="Inicio">Perfil profesional</a>
+      <span class="availability">Administración</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="profile-title">
+        <div>
+          <p class="eyebrow">Perfil profesional</p>
+          <h1 id="profile-title">Organización y gestión para que todo funcione.</h1>
+          <p class="intro">
+            Soy administrativo y me motiva aportar orden, atención y eficiencia
+            a las tareas del día a día. Me gusta facilitar el trabajo de los
+            equipos con una gestión cuidadosa y responsable.
+          </p>
+          <a class="button" href="#competencias">Conoce mis competencias</a>
+        </div>
+        <div class="monogram" aria-hidden="true">A</div>
+      </section>
+
+      <section class="details" aria-label="Información profesional">
+        <article class="card">
+          <h2>Sobre mí</h2>
+          <p>
+            Profesional administrativo con atención al detalle, actitud
+            colaborativa y compromiso con un servicio amable y organizado.
+            Disfruto coordinando tareas y ayudando a que los procesos sean más
+            sencillos.
+          </p>
+        </article>
+
+        <article class="card" id="competencias">
+          <h2>Competencias</h2>
+          <p>Áreas en las que puedo aportar al equipo:</p>
+          <ul class="skills">
+            <li>Gestión documental</li>
+            <li>Atención al cliente</li>
+            <li>Organización de tareas</li>
+            <li>Apoyo administrativo</li>
+            <li>Comunicación</li>
+            <li>Trabajo en equipo</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer>Perfil profesional · Administración</footer>
+  </div>
+</body>
+</html>
